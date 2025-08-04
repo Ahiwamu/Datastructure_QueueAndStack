@@ -6,6 +6,7 @@ public class Major {
     public Major(String name) {
         //START FIX HERE
         this.brandName = name;
+        
         //END FIX HERE
     }
 
