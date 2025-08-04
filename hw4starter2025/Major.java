@@ -28,9 +28,12 @@ public class Major {
         System.out.println("Processed all tickets and all gifts.");
 
         // START FIX HERE
-        while () {
+        while(cardStack.top() != null && ticketQueue.top() != null) {   //if card and ticket isn't empty
             // DO SOMETHING HERE
-            
+            System.out.println("Ticket ID: " + ticketQueue.top().tickId + ", Seat ID: " + ticketQueue.top().seatId);
+            System.out.println("Gift ID: " + cardStack.top().giftId + ", Card Name: " + cardStack.top().cardName);
+            ticketQueue.pop();
+            cardStack.pop();
         }
         //END FIX HERE
 
@@ -43,7 +46,9 @@ public class Major {
 
     public void processOne() {
         // START FIX HERE
-        if ( && ) {
+        if (cardStack.top() != null && ticketQueue.top() != null) { //if card and ticket isn't empty
+            ticketQueue.pop();
+            cardStack.pop();
             
         //END FIX HERE
 
