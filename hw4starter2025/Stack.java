@@ -7,13 +7,12 @@ public class Stack {
         if (this.isEmpty()){  //if stack is empty push to first node
             // Do something
             this.head = node;
-        }else{  //if stack isn't empty push to last node
+            node.next = null;
+        }else{  //if stack isn't empty push to first node by push node that is in stack to back
             // Do something else
             GiftNode cur = this.head;
-            while(cur.next != null){  //set node cur to last node
-              cur = cur.next;
-            }
-            cur.next = node;  //push new node to last node
+            node.next = cur;
+            this.head = node;
         }
     // END FIX HERE
   }
@@ -24,15 +23,11 @@ public class Stack {
             // Do something
             GiftNode cur = this.head;
             if(cur.next == null){ //if stack have one node
-              this.head = null;
+              this.head = null; //remove that node
             }
-            else{ //if stack have many node
-              GiftNode nextnode = cur.next;
-              while(nextnode.next != null){  //set node nextnode to last node
-                cur = cur.next;
-                nextnode = cur.next;
-              }
-              cur.next = null;  //pop last node
+            else{ //if stack have many node 
+              this.head = cur.next; 
+              cur.next = null;  //remove first node
             }
 
         }else{
@@ -44,10 +39,7 @@ public class Stack {
   public GiftNode top(){
     //START FIX HERE
     GiftNode cur = this.head;
-    while(cur.next != null){
-      cur = cur.next;
-    }
-        return cur;
+    return cur;
     // END FIX HERE
   }
 

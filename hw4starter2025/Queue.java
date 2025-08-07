@@ -8,9 +8,11 @@ public class Queue {
         if (head == null){ //if queue is empty push to first node
             // Do something (Empty list)
             this.head = node;
+            this.tail = node;
         }else{ //if queue isn't empty push to last node
             // Do something (Non-empty list)
             this.tail.next = node;
+            //node.next = null;
             this.tail = node;
         }
     //END FIX HERE

@@ -3,6 +3,7 @@ public class Main {
     Major major = new Major("Chiang Mai");
 major.addGift("0001", "Tanjiro");
 major.addTicket("0001", "A1");
+
 major.showStack();
 major.showQueue();
 
@@ -11,3 +12,4 @@ major.showQueue();
     
   }
 }
+  
